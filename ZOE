@@ -487,6 +487,19 @@ end)
 
 UICorner_14.Parent = AutoParry
 
+Open.Name = "Open"
+Open.Parent = Trojanware
+Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Open.Position = UDim2.new(0, 0, 0.286303669, -25)
+Open.Size = UDim2.new(0, 100, 0, 42)
+Open.Style = Enum.ButtonStyle.RobloxButton
+Open.Font = Enum.Font.Cartoon
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextScaled = true
+Open.TextSize = 14.000
+Open.TextWrapped = true
+
 -- Scripts:
 
 local function UUMSLNN_fake_script() -- Emojis.EmojiScript 
@@ -505,7 +518,7 @@ local function UUMSLNN_fake_script() -- Emojis.EmojiScript
 	--Made by Trojan.exe
 end
 coroutine.wrap(UUMSLNN_fake_script)()
-local function LTQYL_fake_script() -- ZOE.ZoeScript 
+local function LTQYL_fake_script()
 	local script = Instance.new('LocalScript', ZOE)
 
 	script.Parent.MouseButton1Click:connect(function()
@@ -519,31 +532,13 @@ local function LTQYL_fake_script() -- ZOE.ZoeScript
 	end)
 	
 	--Made by Trojan.exe
-end
-coroutine.wrap(LTQYL_fake_script)()
-local function ATRCZE_fake_script() -- Main.AntiCheatBypasser 
-	local script = Instance.new('LocalScript', Main)
-
-	local eventbypass
-	
-	eventbypass = hookmetamethod(game, "__namecall", function(self, ...)
-		local method = getnamecallmethod()
-		local args = {...}
-	
-		if not checkcaller() and self.Name == "Anti_Cheat_Remote" and method == "FireServer" then
-			print("Anti Cheat remote was called and blocked.")
-			return; -- do nothing if called
-		end
-	
-		return eventbypass(self, ...)
-	end)
-end
+end	
 local frame = script.Parent -- path to the frame
 local mouse = game:GetService('Players').LocalPlayer:GetMouse(); -- we need the mouse object, which also has the keyboard
 
 mouse.KeyDown:connect(function(key) -- whenever a key is pushed down
 	key = key:lower() -- i do this in all my key events, though i don't remember why
 	if key == 'v' then -- if key pressed is h
-		frame.Visible = not frame.Visible -- flip between visible/invisible
+		frame.Visible = not frame.Visible 
 	end
 end)
