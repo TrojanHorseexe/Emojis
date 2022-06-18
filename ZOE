@@ -46,8 +46,6 @@ TrojanwareVoices.Font = Enum.Font.Cartoon
 TrojanwareVoices.Text = "Trojanware Voices"
 TrojanwareVoices.TextColor3 = Color3.fromRGB(255, 255, 255)
 TrojanwareVoices.TextSize = 24.000
-TrojanwareVoices.Active = true
-TrojanwareVoices.Draggable = true
 
 UICorner.CornerRadius = UDim.new(0, 12)
 UICorner.Parent = TrojanwareVoices
