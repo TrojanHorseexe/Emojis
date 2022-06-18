@@ -487,19 +487,6 @@ end)
 
 UICorner_14.Parent = AutoParry
 
-Open.Name = "Open"
-Open.Parent = Trojanware
-Open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Open.Position = UDim2.new(0, 0, 0.286303669, -25)
-Open.Size = UDim2.new(0, 100, 0, 42)
-Open.Style = Enum.ButtonStyle.RobloxButton
-Open.Font = Enum.Font.Cartoon
-Open.Text = "Open"
-Open.TextColor3 = Color3.fromRGB(255, 255, 255)
-Open.TextScaled = true
-Open.TextSize = 14.000
-Open.TextWrapped = true
-
 -- Scripts:
 
 local function UUMSLNN_fake_script() -- Emojis.EmojiScript 
@@ -551,20 +538,12 @@ local function ATRCZE_fake_script() -- Main.AntiCheatBypasser
 		return eventbypass(self, ...)
 	end)
 end
-coroutine.wrap(ATRCZE_fake_script)()
-local function FMIZ_fake_script() -- Open.OpenScript 
-	local script = Instance.new('Script', Open)
+local frame = script.Parent -- path to the frame
+local mouse = game:GetService('Players').LocalPlayer:GetMouse(); -- we need the mouse object, which also has the keyboard
 
-	script.Parent.MouseButton1Click:connect(function()
-		if script.Parent.Parent.Main.Visible == false then
-			script.Parent.Text = "Close"
-			script.Parent.Parent.Main.Visible = true
-		else
-			script.Parent.Text = "Open"
-			script.Parent.Parent.Main.Visible = false
-		end
-	end)
-	
-	--Made by Trojan.exe
-end
-coroutine.wrap(FMIZ_fake_script)()
+mouse.KeyDown:connect(function(key) -- whenever a key is pushed down
+	key = key:lower() -- i do this in all my key events, though i don't remember why
+	if key == 'v' then -- if key pressed is h
+		frame.Visible = not frame.Visible -- flip between visible/invisible
+	end
+end)
