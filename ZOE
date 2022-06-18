@@ -154,7 +154,7 @@ Laugh.Text = "😂"
 Laugh.TextColor3 = Color3.fromRGB(0, 0, 0)
 Laugh.TextSize = 16.000
 Laugh.MouseButton1Down:connect(function()
-	local MainButton = DioPage.AddButton("😂", function()
+	local MainButton = Emojis.AddButton("😂", function()
 		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("😂", "All")
 		local OriginalKeyUpValue = 0
 		function StopAudio()
@@ -222,7 +222,7 @@ Cry.Text = "😭"
 Cry.TextColor3 = Color3.fromRGB(0, 0, 0)
 Cry.TextSize = 16.000
 Cry.MouseButton1Down:connect(function()
-	local MainButton = DioPage.AddButton("😭", function()
+	local MainButton = Emojis.AddButton("😭", function()
 		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("😭", "All")
 		local OriginalKeyUpValue = 0
 		function StopAudio()
@@ -290,7 +290,7 @@ Mad.Text = "😡"
 Mad.TextColor3 = Color3.fromRGB(0, 0, 0)
 Mad.TextSize = 16.000
 Mad.MouseButton1Down:connect(function()
-	local MainButton = DioPage.AddButton("😡", function()
+	local MainButton = Emojis.AddButton("😡", function()
 		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("😡", "All")
 		local OriginalKeyUpValue = 0
 		function StopAudio()
@@ -358,7 +358,7 @@ Devil.Text = "😈"
 Devil.TextColor3 = Color3.fromRGB(0, 0, 0)
 Devil.TextSize = 16.000
 Devil.MouseButton1Down:connect(function()
-	local MainButton = DioPage.AddButton("😈", function()
+	local MainButton = Emojis.AddButton("😈", function()
 		game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("😈", "All")
 		local OriginalKeyUpValue = 0
 		function StopAudio()
